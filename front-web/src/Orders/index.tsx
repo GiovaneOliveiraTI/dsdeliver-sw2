@@ -4,10 +4,12 @@ import {ReactComponent as Logo } from './logo.svg';
 import StepsHeader from "./StepsHeader";
 import ProductList from "./ProductList";
 import { useEffect, useState } from "react";
-import { Product } from "./types";
+import { OrderLocationData, Product } from "./types";
 import { fetchProducts } from "./api";
+import OrderLocation from "./OrderLocation";
 function Orders() {
     const [products, setProducts] = useState<Product[]>([]); 
+    const [orderLocation, setOrderLocation] = useState<OrderLocationData>();
     console.log(products);
     useEffect(() =>{
         fetchProducts()
@@ -19,6 +21,7 @@ function Orders() {
      <div className="orders-container">
          <StepsHeader />
          <ProductList  products ={products} />    
+         <OrderLocation  onChangeLocation={location => setOrderLocation(location)}/>
      </div>
     )
 }
