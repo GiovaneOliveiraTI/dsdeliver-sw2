@@ -1,7 +1,6 @@
-import { type } from "os";
-import { checkIsSelected } from "./helpers";
+import {checkIsSelected} from "./helpers";
 import ProductCard from "./ProductCard";
-import { Product } from "./types";
+import {Product} from "./types";
 
 type Props = {
     products: Product[];

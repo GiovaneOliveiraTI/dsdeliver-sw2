@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-import App from "../App";
+import {Link} from "react-router-dom";
 import Footer from "../Footer";
-import { ReactComponent as Main } from './main.svg';
+import {ReactComponent as Main} from './main.svg';
 import './styles.css';
 
 function Home() {

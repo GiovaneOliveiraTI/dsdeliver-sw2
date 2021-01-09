@@ -1,8 +1,8 @@
-import App from "../App"
 import './styles.css';
 import {ReactComponent as YouTubeICon} from './youtube.svg';
 import {ReactComponent as LikedinICon} from './linkedin.svg';
 import {ReactComponent as InstagramICon} from './instagram.svg';
+
 function Footer() {
     return (
         <footer className="main-footer"> 

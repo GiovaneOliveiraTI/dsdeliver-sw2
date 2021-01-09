@@ -1,5 +1,3 @@
-import App from "../App"
-import {ReactComponent as Logo } from './logo.svg';
 function StepsHeader() {
     return (
     <header className="orders-steps-container">
