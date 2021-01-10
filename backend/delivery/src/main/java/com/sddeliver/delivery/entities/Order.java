@@ -25,6 +25,7 @@ public class Order {
     private Double longitude;
     private Instant moment;
     private OrderStatus status;
+    private Double total;
 
     @ManyToMany
     @JoinTable(name = "tb_order_product",
@@ -40,5 +41,13 @@ public class Order {
         this.longitude = longitude;
         this.moment = moment;
         this.status = status;
+    }
+
+    public Double getTotal() {
+        double sum = 0.0;
+        for(Product p : products) {
+            sum += p.getPrice();
+        }
+        return sum;
     }
 }
